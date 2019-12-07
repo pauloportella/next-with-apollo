@@ -13,7 +13,7 @@ const QUERY = gql`
 
 const Index = () => {
   const { loading, data } = useQuery(QUERY);
-  console.log(!loading && data.name.hire);
+  console.log(!loading && data.hire.name);
 
   if (loading || !data) {
     return <p>loading</p>;
