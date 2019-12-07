@@ -18,6 +18,8 @@ const Index = () => {
     return <p>loading</p>;
   }
 
+  console.log(data);
+
   return <p>{data.hire.name}</p>;
 };
 
