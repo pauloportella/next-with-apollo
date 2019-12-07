@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import React from 'react';
 
 const QUERY = gql`
@@ -13,6 +13,7 @@ const QUERY = gql`
 
 const Index = () => {
   const { loading, data } = useQuery(QUERY);
+  console.log(!loading && data.name.hire);
 
   if (loading || !data) {
     return <p>loading</p>;
